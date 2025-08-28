@@ -1,0 +1,27 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "poi86-d1-rest",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-03-03",
+    "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "poi86com",
+          "database_id": "f74bfb7f-293b-42bc-942d-ffe96320e9fe"
+        }
+    ],
+    "secrets_store_secrets": [
+        {
+            "store_id": "a03e595ed0004bc18c56789de1b343c9",
+            "binding": "SECRET",
+            "secret_name": "zgx840925"
+        }
+    ],
+	"observability": {
+		"enabled": true
+	}
+}
